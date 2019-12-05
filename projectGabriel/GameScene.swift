@@ -34,10 +34,10 @@ class GameScene: SKScene {
             walkFrames.append(bearAnimatedAtlas.textureNamed(bearTextureName))
         }
         bearWalkingFrames = walkFrames
-        
+        let point = CGPoint(x: frame.midX, y: frame.midY)
         let firstFrameTexture = bearWalkingFrames[0]
         bear = SKSpriteNode(texture: firstFrameTexture)
-        bear.position = CGPoint(x: frame.midX, y: frame.midY)
+        bear.position = point
         addChild(bear)
     }
     
